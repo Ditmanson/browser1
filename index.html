@@ -2,18 +2,19 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
     <link href="./styles.css" rel="stylesheet">
-    <title>Hello World!</title>
+    <title>Don't tell google browser</title>
   </head>
   <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
-
-    <!-- You can also require other files to run in this process -->
-    <script src="./renderer.js"></script>
+    <div class="top">
+      <button id="backButton"><</button>
+      <button id="homeButton">home</button>
+      <button id="forwardButton">></button>
+      <input type="text" class="url">
+      <button id="url">Enter URL with https://</button>
+    </div>
+    <webview src="https://www.google.com" id="myWebview"></webview>
+    <script src="script.js"></script>
   </body>
 </html>
